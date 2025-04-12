@@ -29,7 +29,7 @@ export class Transaction {
   @Column('decimal', { precision: 10, scale: 2 })
   value: number;
 
-  @Column({ type: 'date', default: () => 'CURRENT_DATE' })
+  @Column({ type: 'datetime', default: () => 'CURRENT_TIMESTAMP' })
   date: Date;
 
   @CreateDateColumn()
